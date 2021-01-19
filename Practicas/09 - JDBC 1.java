@@ -19,7 +19,7 @@ public class gestioProfes
 	   // en el servidor postgresfib, SEMPRE el SSL ha de ser true
 	   Properties props = new Properties();
 	   props.setProperty("user","NOMBRE.APELLIDO"); // Nombre de usuario
-	   props.setProperty("password","DBdd/mm/aa");	// Contraseña
+	   props.setProperty("password","DBdd/mm/aa");	// ContraseÃ±a
 	   props.setProperty("ssl","true");
 	   props.setProperty("sslfactory", "org.postgresql.ssl.NonValidatingFactory"); 
 	   Connection c = DriverManager.getConnection("jdbc:postgresql://postgresfib.fib.upc.es:6433/DBNOMBRE.APELLIDO", props);
@@ -47,8 +47,8 @@ public class gestioProfes
            System.out.println ();
 		   
 	   // IMPLEMENTAR
-       // printar el dni i el nom dels professors que tenen els telèfons amb número inferior al que s'indica en la variable buscaTelf
-       // en cas que no hi hagi cap professor amb aquest telèfon printar "NO TROBAT"     
+       // printar el dni i el nom dels professors que tenen els telÃ¨fons amb nÃºmero inferior al que s'indica en la variable buscaTelf
+       // en cas que no hi hagi cap professor amb aquest telÃ¨fon printar "NO TROBAT"     
        String buscaTelf = "3334";
        
        ResultSet r = st.executeQuery("SELECT dni, nomProf, telefon FROM professors WHERE telefon < '" + buscaTelf + "';");
