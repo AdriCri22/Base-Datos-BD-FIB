@@ -19,7 +19,7 @@ public class gestioProfes
 	   // en el servidor postgresfib, SEMPRE el SSL ha de ser true
 	   Properties props = new Properties();
 	   props.setProperty("user","NOMBRE.APELLIDO"); // Nombre de usuario
-	   props.setProperty("password","DBdd/mm/aa");	// Contraseña
+	   props.setProperty("password","DBdd/mm/aa");	// ContraseÃ±a
 	   props.setProperty("ssl","true");
 	   props.setProperty("sslfactory", "org.postgresql.ssl.NonValidatingFactory"); 
 	   Connection c = DriverManager.getConnection("jdbc:postgresql://postgresfib.fib.upc.es:6433/DBNOMBRE.APELLIDO", props);
@@ -59,7 +59,7 @@ public class gestioProfes
 	       	+ "SET superficie = superficie + 3 "
 	       	+ "WHERE d.modul = 'omega' AND "
 	       	+ "not exists (SELECT * FROM assignacions a WHERE a.modul = 'omega' AND a.numero = d.numero AND a.instantFi is NULL);");
-	   if (mod == 0) System.out.println("No se ha hecho ninguna modificación");
+	   if (mod == 0) System.out.println("No se ha hecho ninguna modificaciÃ³n");
        
 	   // Commit i desconnexio de la base de dades
 	   c.commit();
